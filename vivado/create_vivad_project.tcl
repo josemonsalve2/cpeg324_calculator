@@ -204,12 +204,12 @@ set_property "verilog_uppercase" "0" $obj
 # Set 'sources_1' fileset object
 set obj [get_filesets sources_1]
 set files [list \
- "[file normalize "$origin_dir/vivadoProject/Lab2Calculator/Lab2Calculator.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci"]"\
+ "[file normalize "$origin_dir/hdl/blk_mem_gen_0/blk_mem_gen_0.xci"]"\
 ]
 add_files -norecurse -fileset $obj $files
 
 # Set 'sources_1' fileset file properties for remote files
-set file "$origin_dir/vivadoProject/Lab2Calculator/Lab2Calculator.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci"
+set file "$origin_dir/hdl/blk_mem_gen_0/blk_mem_gen_0.xci"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 if { ![get_property "is_locked" $file_obj] } {
@@ -426,3 +426,4 @@ set_property -name {steps.write_bitstream.args.more options} -value {} -objects 
 current_run -implementation [get_runs impl_1]
 
 puts "INFO: Project created:Lab2Calculator"
+puts "Good luck guys!!"
